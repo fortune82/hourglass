@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(60, 192, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: absolute;
+    height: 600px;
+}
+
+.upHourglass,
+.downHourglass {
+    margin-top: 250%;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(29, 2, 2);
+}
+
+.downHourglass {
+    position: relative;
+    margin-top: -125%;
+    z-index: -1;
+}
+
+.upHourglass::after,
+.upHourglass::before {
+    display: block;
+    content: "";
+    margin-bottom: -300%;
+    z-index: 5;
+    width: 10px;
+    height: 600px;
+    background-color: rgb(92, 7, 7);
+}
+
+
+.upHourglass::before {
+    margin-left: 100%;
+}
+
+.hourglass-1,
+.hourglass-2,
+.hourglass-3,
+.hourglass-4 {
+    position: relative;
+    left: 10px;
+    width: 190px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 0 0 50% 50%;
+    /* animation: sand 60s; */
+}
+
+.hourglass-1 {
+    background-color: rgb(234, 248, 29);
+
+}
+
+
+.hourglass-3 {
+    position: absolute;
+    z-index: 19;
+    top: 92%;
+    height: 0;
+    /* background: linear-gradient(to left, #fff #000); */
+}
+
+.sand {
+    position: relative;
+    z-index: 5;
+    bottom: 42%;
+    left: 100px;
+    width: 5px;
+    height: 250px;
+    background-color: rgb(234, 248, 29);
+}
+
+/* @keyframes sand {
+    100% {
+        background: linear-gradient(to top, rgb(234, 248, 29), rgb(232, 248, 5) 50%, #eee 75%, rgb(253, 252, 252) 75%);
+    }
+} */
+
+.hourglass-2,
+.hourglass-4 {
+    border-radius: 50% 50% 0 0;
+}
+
+.hourglass-4 {
+    position: absolute;
+    z-index: 20;
+    bottom: -75%;
+    border-radius: 50% 50% 0 0;
+    background-color: rgb(234, 248, 29);
+    height: 0;
+}
