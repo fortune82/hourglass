@@ -13,6 +13,7 @@ body {
 .wrapper {
     position: absolute;
     height: 600px;
+    top: -53%;
 }
 
 .upHourglass,
@@ -48,28 +49,35 @@ body {
 .hourglass-1,
 .hourglass-2,
 .hourglass-3,
-.hourglass-4 {
+.hourglass-4,
+.hourglass-3-mask {
     position: relative;
     left: 10px;
     width: 190px;
     height: 250px;
     background-color: #fff;
     border-radius: 0 0 50% 50%;
-    /* animation: sand 60s; */
 }
 
 .hourglass-1 {
     background-color: rgb(234, 248, 29);
+    background: linear-gradient(360deg, rgb(185, 197, 18), rgb(234, 248, 29) 5%);
 
 }
 
-
-.hourglass-3 {
+.hourglass-3,
+.hourglass-3-mask {
     position: absolute;
     z-index: 19;
     top: 92%;
     height: 0;
     /* background: linear-gradient(to left, #fff #000); */
+}
+
+.hourglass-3-mask {
+    z-index: 21;
+    top: 92%;
+    border-radius: 0;
 }
 
 .sand {
@@ -80,13 +88,8 @@ body {
     width: 5px;
     height: 250px;
     background-color: rgb(234, 248, 29);
+    background: linear-gradient(180deg, rgb(185, 197, 18), rgb(234, 248, 29) 5%);
 }
-
-/* @keyframes sand {
-    100% {
-        background: linear-gradient(to top, rgb(234, 248, 29), rgb(232, 248, 5) 50%, #eee 75%, rgb(253, 252, 252) 75%);
-    }
-} */
 
 .hourglass-2,
 .hourglass-4 {
@@ -99,5 +102,6 @@ body {
     bottom: -75%;
     border-radius: 50% 50% 0 0;
     background-color: rgb(234, 248, 29);
+    background: linear-gradient(rgb(185, 197, 18), rgb(234, 248, 29) 5%);
     height: 0;
 }
